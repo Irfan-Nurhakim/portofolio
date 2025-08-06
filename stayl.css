@@ -64,6 +64,13 @@ body {
     transition: var(--transition);
 }
 
+.left-align-title{
+    text-align: center;
+}
+p {
+    text-align: justify;
+}
+
 .navbar-nav .nav-link:hover {
     color: var(--primary-color);
 }
