@@ -11,7 +11,7 @@ window.addEventListener('scroll', function() {
 // Typing Animation
 document.addEventListener('DOMContentLoaded', function() {
     const options = {
-        strings: ['Web Developer','Mobile Developer', 'UI/UX Designer', 'Freelancer', 'Creative Thinker'],
+        strings: ['Web Developer','Mobile Developer', 'UI/UX Designer',  'Quality Assurance','Freelancer'],
         typeSpeed: 100,
         backSpeed: 50,
         backDelay: 2000,
