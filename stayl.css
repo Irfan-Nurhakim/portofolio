@@ -77,6 +77,22 @@ p {
 .navbar {
     padding: 1px 30px;
     transition: var(--transition);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--text-color);
+}
+            
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+    padding-left: 30px;
+    margin-top: 1px;
 }
 
 .navbar.scrolled {
@@ -88,21 +104,12 @@ p {
     background-color: transparent;
 }
 
-/* Logo */
-.logo {
-    max-height: 50px;
-    position: absolute;
-    left: 0;
-    width: auto;
-    padding-left: 30px;
-    top: 15px;
-}
-
 /* Navigation Items */
 .nav-item {
     padding: 0 12px;
     font-size: 18px;
-    color: var(--light-color); 
+    color: var(--dark-color); 
+
     font-weight: 500;
 }
 
@@ -138,6 +145,15 @@ p {
     width: 100%;
 }
 
+.navbar-collapse.show {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /*---------------------------*\
   4. DARK MODE TOGGLE
 \*---------------------------*/
@@ -155,11 +171,7 @@ p {
     justify-content: center;
     transition: var(--transition);
     margin-left: 10px;
-}
-
-.dark-mode-toggle:hover {
-    color: var(--primary-color);
-    transform: rotate(30deg);
+    position: relative; /* Added for better icon positioning */
 }
 
 .dark-mode-toggle .fa-sun {
@@ -317,7 +329,7 @@ p {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
-    color: var(--light-color);
+    color: var(--text-color);
 }
 
 .section-title::after {
@@ -713,6 +725,11 @@ footer {
 
     .navbar-toggler {
         margin-right: 15px;
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        padding: 8px;
+        transition: var(--transition);
+
     }
 
     .navbar-collapse {
@@ -788,6 +805,11 @@ footer {
     /* Container Spacing */
     .container {
         padding: 10px 4%;
+    }
+
+    .navbar-brand img {
+        max-height: 35px;
+        padding-left: 10px;
     }
 
     /* Hero Section Responsive */
